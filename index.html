@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TO DO LIST</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">To Do List</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Main</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">To Do</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Contact</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <div class="container wrapper">
+      <h1>To Do List</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    </div>
+  </section>
+
+  <section class="content">
+    <div class="container">
+      <div class="content__wrapper">
+        <div class="row">
+
+          <div class="col col-12 col-md-6">
+            <h3>Add new task</h3>
+            <form class="form-add" action="https://echo.htmlacademy.ru">
+              <div class="mb-3">
+                <label class="form-label" for="input-task-name-id">Input task name</label>
+                <input class="form-control input-name-js" type="text" id="input-task-name-id"
+                  aria-describedby="task-name-Help" required>
+                <div class="form-text message-js" id="task-name-Help">Input task name</div>
+              </div>
+              <div class="mb-3 form-check">
+                <input class="form-check-input check-js" type="checkbox" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Add new task to the head</label>
+              </div>
+              <button class="btn btn-primary" type="submit">Add</button>
+            </form>
+          </div>
+
+          <div class="col col-12 col-md-6 mt-3 mt-md-0">
+            <h3>Search task</h3>
+            <form class="form-search" action="https://echo.htmlacademy.ru">
+              <div class="mb-3">
+                <label class="form-label" for="input-task-name-search-id">Input task name</label>
+                <input class="form-control input-search-js" type="text" id="input-task-name-search-id"
+                  aria-describedby="task-search-Help" oninput="search()" autocomplete="off" required>
+                <div class="form-text" id="task-search-Help">Input task name</div>
+              </div>
+              <output class="output-js">Enter searching task</output>
+              <button class="btn btn-primary visually-hidden" type="submit">Search</button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <hr>
+    <div class="container">
+      <div class="list-wrapper">
+        <h3>Task list</h3>
+        <ul class="task-list">
+
+        </ul>
+        <button class="btn btn-danger mt-2 delete-btn" type="button" onclick="deleteItem()" disabled>Delete</button>
+        <button class="btn btn-success mt-2 sort-btn" type="button" onclick="sortItem()">Sort</button>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <h3>FOOTER</h3>
+    </div>
+  </footer>
+  <script src="./bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/my.js"></script>
+</body>
+
+</html>
